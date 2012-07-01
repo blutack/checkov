@@ -1,0 +1,182 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<stetic-interface>
+  <configuration>
+    <images-root-path>..</images-root-path>
+    <target-gtk-version>2.12</target-gtk-version>
+  </configuration>
+  <import>
+    <widget-library name="glade-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
+    <widget-library name="../bin/Debug/checkov.exe" internal="true" />
+  </import>
+  <widget class="Gtk.Window" id="MainWindow" design-size="455 300">
+    <property name="MemberName" />
+    <property name="Title">CheckList</property>
+    <property name="WindowPosition">CenterOnParent</property>
+    <signal name="DeleteEvent" handler="OnDeleteEvent" />
+    <signal name="KeyPressEvent" handler="WindowKeyPressEvent" />
+    <child>
+      <widget class="Gtk.Notebook" id="notebook1">
+        <property name="MemberName" />
+        <property name="CanFocus">True</property>
+        <property name="CurrentPage">0</property>
+        <child>
+          <widget class="Gtk.VBox" id="vbox1">
+            <property name="MemberName" />
+            <property name="Spacing">6</property>
+            <child>
+              <widget class="Gtk.Label" id="currentItem">
+                <property name="MemberName" />
+                <property name="LabelProp">Item</property>
+                <property name="UseMarkup">True</property>
+                <property name="Wrap">True</property>
+              </widget>
+              <packing>
+                <property name="Position">0</property>
+                <property name="AutoSize">False</property>
+                <property name="Padding">20</property>
+              </packing>
+            </child>
+            <child>
+              <widget class="Gtk.Button" id="launch">
+                <property name="MemberName" />
+                <property name="Visible">False</property>
+                <property name="CanFocus">True</property>
+                <property name="Type">TextOnly</property>
+                <property name="Label">Launch Autopilot...</property>
+                <property name="UseUnderline">True</property>
+                <signal name="Pressed" handler="Launch" />
+              </widget>
+              <packing>
+                <property name="Position">1</property>
+                <property name="AutoSize">True</property>
+                <property name="Expand">False</property>
+                <property name="Fill">False</property>
+              </packing>
+            </child>
+            <child>
+              <widget class="Gtk.HBox" id="hbox2">
+                <property name="MemberName" />
+                <property name="Spacing">6</property>
+                <child>
+                  <widget class="Gtk.Button" id="back">
+                    <property name="MemberName" />
+                    <property name="CanFocus">True</property>
+                    <property name="UseStock">True</property>
+                    <property name="Type">StockItem</property>
+                    <property name="StockId">gtk-go-back</property>
+                    <signal name="Pressed" handler="OnBackPressed" />
+                    <property name="label">gtk-go-back</property>
+                  </widget>
+                  <packing>
+                    <property name="Position">0</property>
+                    <property name="AutoSize">True</property>
+                    <property name="Expand">False</property>
+                    <property name="Fill">False</property>
+                    <property name="Padding">5</property>
+                  </packing>
+                </child>
+                <child>
+                  <widget class="Gtk.Entry" id="notes">
+                    <property name="MemberName" />
+                    <property name="Tooltip">Notes...</property>
+                    <property name="CanFocus">True</property>
+                    <property name="IsEditable">True</property>
+                    <property name="ActivatesDefault">True</property>
+                    <property name="InvisibleChar">•</property>
+                    <signal name="FocusInEvent" handler="OnNotesFocusInEvent" />
+                    <signal name="FocusOutEvent" handler="OnNotesFocusOutEvent" />
+                  </widget>
+                  <packing>
+                    <property name="Position">1</property>
+                    <property name="AutoSize">True</property>
+                    <property name="Padding">5</property>
+                  </packing>
+                </child>
+                <child>
+                  <widget class="Gtk.Button" id="ok">
+                    <property name="MemberName" />
+                    <property name="CanFocus">True</property>
+                    <property name="UseStock">True</property>
+                    <property name="Type">StockItem</property>
+                    <property name="StockId">gtk-ok</property>
+                    <signal name="Pressed" handler="OkPressed" />
+                    <property name="label">gtk-ok</property>
+                  </widget>
+                  <packing>
+                    <property name="Position">2</property>
+                    <property name="AutoSize">True</property>
+                    <property name="Expand">False</property>
+                    <property name="Fill">False</property>
+                    <property name="Padding">5</property>
+                  </packing>
+                </child>
+                <child>
+                  <widget class="Gtk.Button" id="quit">
+                    <property name="MemberName" />
+                    <property name="Visible">False</property>
+                    <property name="CanFocus">True</property>
+                    <property name="UseStock">True</property>
+                    <property name="Type">StockItem</property>
+                    <property name="StockId">gtk-quit</property>
+                    <signal name="Pressed" handler="OnDeleteEvent" />
+                    <property name="label">gtk-quit</property>
+                  </widget>
+                  <packing>
+                    <property name="PackType">End</property>
+                    <property name="Position">3</property>
+                    <property name="AutoSize">True</property>
+                    <property name="Expand">False</property>
+                    <property name="Fill">False</property>
+                    <property name="Padding">5</property>
+                  </packing>
+                </child>
+              </widget>
+              <packing>
+                <property name="PackType">End</property>
+                <property name="Position">2</property>
+                <property name="AutoSize">True</property>
+                <property name="Expand">False</property>
+                <property name="Fill">False</property>
+                <property name="Padding">5</property>
+              </packing>
+            </child>
+          </widget>
+        </child>
+        <child>
+          <widget class="Gtk.Label" id="label1">
+            <property name="MemberName" />
+            <property name="LabelProp">Current</property>
+          </widget>
+          <packing>
+            <property name="type">tab</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.ScrolledWindow" id="GtkScrolledWindow">
+            <property name="MemberName" />
+            <property name="ShadowType">In</property>
+            <child>
+              <widget class="Gtk.TreeView" id="tree">
+                <property name="MemberName" />
+                <property name="CanFocus">True</property>
+                <property name="ShowScrollbars">True</property>
+              </widget>
+            </child>
+          </widget>
+          <packing>
+            <property name="Position">1</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Label" id="label2">
+            <property name="MemberName" />
+            <property name="LabelProp">Completed</property>
+          </widget>
+          <packing>
+            <property name="type">tab</property>
+          </packing>
+        </child>
+      </widget>
+    </child>
+  </widget>
+</stetic-interface>

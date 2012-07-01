@@ -1,0 +1,12 @@
+// Preflight checklist
+Transmitter on?
+Check flight battery charge
+Connect flight battery
+Check aileron
+Check elevator
+Check rudder
+Connect payload battery
+Verify payload function
+Complete range check
+// The final Launch line controls the program to launch
+Launch paparazzi
