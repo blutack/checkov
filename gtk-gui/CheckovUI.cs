@@ -20,11 +20,11 @@ public partial class CheckovUI
 	protected virtual void Build ()
 	{
 		global::Stetic.Gui.Initialize (this);
-		// Widget CheckovUI
-		this.Name = "CheckovUI";
+		// Widget MainWindow
+		this.Name = "MainWindow";
 		this.Title = "CheckList";
 		this.WindowPosition = ((global::Gtk.WindowPosition)(4));
-		// Container child CheckovUI.Gtk.Container+ContainerChild
+		// Container child MainWindow.Gtk.Container+ContainerChild
 		this.notebook1 = new global::Gtk.Notebook ();
 		this.notebook1.CanFocus = true;
 		this.notebook1.Name = "notebook1";
