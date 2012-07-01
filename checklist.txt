@@ -9,4 +9,9 @@ Connect payload battery
 Verify payload function
 Complete range check
 // The final Launch line controls the program to launch
-Launch paparazzi
+!Launch paparazzi
+Verify connection
+Verify PFD directions
+Check GPS lock status
+!Launch video_receive
+Check RC status
