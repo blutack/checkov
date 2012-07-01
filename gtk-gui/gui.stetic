@@ -8,9 +8,17 @@
     <widget-library name="glade-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
     <widget-library name="../bin/checkov-dbg.exe" internal="true" />
   </import>
+  <icon-factory>
+    <icon-set id="program">
+      <source>
+        <property name="Image">stock:gtk-apply Button</property>
+      </source>
+    </icon-set>
+  </icon-factory>
   <widget class="Gtk.Window" id="CheckovUI" design-size="455 300">
     <property name="MemberName" />
-    <property name="Title">CheckList</property>
+    <property name="Title">Checkov</property>
+    <property name="Icon">stock:gtk-apply Menu</property>
     <property name="WindowPosition">CenterOnParent</property>
     <signal name="DeleteEvent" handler="OnDeleteEvent" />
     <signal name="KeyPressEvent" handler="WindowKeyPressEvent" />

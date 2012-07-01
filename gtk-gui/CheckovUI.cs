@@ -22,7 +22,8 @@ public partial class CheckovUI
 		global::Stetic.Gui.Initialize (this);
 		// Widget CheckovUI
 		this.Name = "CheckovUI";
-		this.Title = "CheckList";
+		this.Title = "Checkov";
+		this.Icon = global::Stetic.IconLoader.LoadIcon (this, "gtk-apply", global::Gtk.IconSize.Menu);
 		this.WindowPosition = ((global::Gtk.WindowPosition)(4));
 		// Container child CheckovUI.Gtk.Container+ContainerChild
 		this.notebook1 = new global::Gtk.Notebook ();
