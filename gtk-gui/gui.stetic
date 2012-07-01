@@ -72,7 +72,7 @@
                     <property name="UseStock">True</property>
                     <property name="Type">StockItem</property>
                     <property name="StockId">gtk-go-back</property>
-                    <signal name="Pressed" handler="OnBackPressed" />
+                    <signal name="Pressed" handler="BackPressed" />
                     <property name="label">gtk-go-back</property>
                   </widget>
                   <packing>

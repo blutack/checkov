@@ -48,6 +48,11 @@ public class Checklist
 		return items [currentIndex];
 	}
 	
+	public int Position()
+	{
+		return currentIndex;
+	}
+	
 	public bool Next ()
 	{
 		if (currentIndex + 1 < items.Count) {

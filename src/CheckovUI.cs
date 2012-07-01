@@ -82,9 +82,10 @@ public partial class CheckovUI: Gtk.Window
 		quit.Show ();
 	}
 
-	protected void OnBackPressed (object sender, System.EventArgs e)
+	protected void BackPressed (object sender, System.EventArgs e)
 	{
-		if(!checklist.Previous ())
+		checklist.Previous();
+		if(checklist.Position() == 0)
 			back.Sensitive = false;
 	}
 	
@@ -137,7 +138,10 @@ public partial class CheckovUI: Gtk.Window
 		// Move on enter, if user starts typing focus notes box
 		if (args.Event.Key == Gdk.Key.Return) {
 			ok.GrabFocus ();
-			OkPressed (new object (), new EventArgs ());
+			OkPressed (null, null);
+		} else if (args.Event.Key == Gdk.Key.BackSpace) {
+			back.GrabFocus();
+			BackPressed (null, null);
 		} else {
 			if(!notes.HasFocus)
 				notes.GrabFocus();

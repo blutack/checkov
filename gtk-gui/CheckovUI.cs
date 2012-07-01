@@ -155,7 +155,7 @@ public partial class CheckovUI
 		this.DeleteEvent += new global::Gtk.DeleteEventHandler (this.OnDeleteEvent);
 		this.KeyPressEvent += new global::Gtk.KeyPressEventHandler (this.WindowKeyPressEvent);
 		this.launch.Pressed += new global::System.EventHandler (this.Launch);
-		this.back.Pressed += new global::System.EventHandler (this.OnBackPressed);
+		this.back.Pressed += new global::System.EventHandler (this.BackPressed);
 		this.notes.FocusInEvent += new global::Gtk.FocusInEventHandler (this.OnNotesFocusInEvent);
 		this.notes.FocusOutEvent += new global::Gtk.FocusOutEventHandler (this.OnNotesFocusOutEvent);
 		this.ok.Pressed += new global::System.EventHandler (this.OkPressed);
